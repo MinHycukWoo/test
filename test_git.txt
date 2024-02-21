@@ -1,0 +1,14 @@
+리눅스 도커 이미지 한번에 없애기
+
+docker stop $(docker ps -q)
+docker rm $(docker ps -a -q)
+docker rmi -f $(docker images -q)
+
+윈도우
+
+for /f "delims=" %A in ('docker ps -q') do (set rm1=%A)
+for /f "delims=" %A in ('docker ps -a -q') do (set rm2=%A)
+for /f "delims=" %A in ('docker images -q') do (set rm3=%A)
+docker stop %rm1%
+docker rm %rm2%
+docker rmi -f %rm3%

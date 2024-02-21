@@ -1,0 +1,4 @@
+git init : 깃 bash 에서 워크스페이스 지정하기
+git status : 현재 워크스페이스의 상태 확인하기
+git add .(경로나 파일명) : 커밋할 파일들을 add 하기
+git commit -m "메시지 적어주기"
