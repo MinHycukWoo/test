@@ -11,6 +11,27 @@ git remote add origin <url>
 git remote add origin https://github.com/MinHycukWoo/test.git
 git branch -M main
 git push -u origin main
+
+(이 사항은 git bash 에서 어던 브런치로 로그인 되어있는지 봐야한다.)
 git push -u origin master
 2020년부터는 
 git push -u origin main
+
+git push origin master 입력하니
+error: src refspec master does not match any 발생
+
+
+원인 :
+깃허브에서 pull 없이 push할 경우
+기존 내용 삭제 문제가 생길 수 있기 때문.
+
+해결 방법 :
+git init
+git add .
+git commit -m "message"
+git remote add origin "github.com/your_ropo.git"
+git push -u origin master
+
+만약 master 브랜치가 없어서 발생하는 오류라면 :
+git checkout -b 'master'
+git push origin master
