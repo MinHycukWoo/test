@@ -6,8 +6,17 @@ commit 한것 까지만 	--soft HEAD^
 
 git reset --hard HEAD^
 repository에 올라간것들을 수정안한 상태로 만든다
+repository commit된거 삭제 
+staging area add된거 삭제
+work space 커밋하기 전으로 파일들을 원래상태로 되돌림 
+
 git reset --mixed HEAD^
 repository에 올라간 것들을 working directory 상태까지
+repository commit된거 삭제 
+staging area add된거 삭제
+*work space 작업중인 파일은 건드리지 않음!
+
+
 git reset --soft HEAD^ 
 repository에 올라간 것을을 staging area 까지 되돌린다
 
