@@ -28,3 +28,7 @@ HEAD : 가장 최근 버전에서
 하나 HEAD^
 둘 HEAD^^
 셋 HEAD^^^
+
+git diff
+git revert
+git log
