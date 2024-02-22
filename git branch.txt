@@ -22,3 +22,11 @@ git branch my_branch
 브런치 바꿔서 들어가기
 git checkout my_branch
 
+브랜치에 따라 각자가 작업한 파일만 보이게 된다.
+마지막에는 병합을 해야하는데
+합치기 전에 어던브런치를 어디로 합칠것인가를 분명히 해야한다.
+
+master에 mybranch를 병합하고자 한다
+결과 master
+그럼 일단 master로 들어간다.
+
