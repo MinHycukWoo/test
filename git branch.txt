@@ -29,4 +29,7 @@ git checkout my_branch
 master에 mybranch를 병합하고자 한다
 결과 master
 그럼 일단 master로 들어간다.
+그 후 
+git merge my_branch
+병합하고자 하는 브런치명을 적어준다
 
