@@ -1,0 +1,24 @@
+Branch 필요성
+git 을 이용한 협업의 원리
+Branch를 다루는 방법
+
+협업할떄 각자 담당한 부분을 업데이트 하는데
+A라는 사람은 B라는 사람이 작업한 부분을 신경 쓸 필요가 없는데도
+코드 병합을 위해 이해해야 한다.
+
+branch로 작업 영역을 나누는것이 중요하다
+
+처음 git init으로 저장소를 지정해주게되면
+기본적으로 master branch가 되게 된다
+
+최초 한번은 프로젝트를 commit을 해야 branch 작업이 가능
+
+branch 보기
+git branch
+
+branch 만들기 *브런치명
+git branch my_branch
+
+브런치 바꿔서 들어가기
+git checkout my_branch
+
