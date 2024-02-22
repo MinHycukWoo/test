@@ -20,6 +20,12 @@ staging area add된거 삭제
 git reset --soft HEAD^ 
 repository에 올라간 것을을 staging area 까지 되돌린다
 
+repository에 올라간 것들을 working directory 상태까지
+repository commit된거 삭제 
+staging area add된것을 건드리지 않음!
+*work space 작업중인 파일은 건드리지 않음!
+
+
 HEAD^
 HEAD : 가장 최근 버전에서
 ^ : 하나 되돌리자
@@ -32,3 +38,8 @@ HEAD : 가장 최근 버전에서
 git diff
 git revert
 git log
+
+
+git remote add origin https://github.com/MinHycukWoo/test.git
+git branch -M main
+git push -u origin main
