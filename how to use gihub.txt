@@ -1,14 +1,58 @@
-리눅스 도커 이미지 한번에 없애기
+branch 개념을 원격저장소(github)에 접목시켜 실질적인 협업 이루기
+실질적으로 git에서 거의 모르는 사항
 
-docker stop $(docker ps -q)
-docker rm $(docker ps -a -q)
-docker rmi -f $(docker images -q)
+원격저장소는 그저 또 다른 repository(저장소)일뿐 
+branch를 사용한 협업은 repository끼리의 상호작용일뿐
 
-윈도우
+repository끼릐의 상호작용 종류
+원격 저장소에 (조회(추가)하기)	git remote
+git remote -v
+내 로컬 repository와 상호작용 하고 있는 혹은 할수있는 원격 저장소들의 목록을 조회
+-v옵션 : 단축이름과 URL 같이보기
 
-for /f "delims=" %A in ('docker ps -q') do (set rm1=%A)
-for /f "delims=" %A in ('docker ps -a -q') do (set rm2=%A)
-for /f "delims=" %A in ('docker images -q') do (set rm3=%A)
-docker stop %rm1%
-docker rm %rm2%
-docker rmi -f %rm3%
+git remote add origin <url>
+git	: 깃 명령어 시작
+remote	: 내 repository와 상호작용할 원격저장소를 찾아서
+add	: 거기에 추가하는데
+origin	: add 할 원격 저장소의 이름은 origin
+<url>	: 그 원격저장소의 url은 이거다.
+
+기존 워킹 디렉토리에 새 원격저장소를 추가하는 명령어
+git remote add <단축이름><url>
+
+
+$ git remote -v
+origin  https://github.com/MinHycukWoo/test.git (fetch)
+origin  https://github.com/MinHycukWoo/test.git (push)
+
+
+
+원격저장소에 (밀어넣기)		git push
+git push -u origin master
+git
+push
+-u	: 디폴트 설정을 의미
+origin	: origin의 master 브런치로 푸쉬
+master	: 내 repository에 master 브런치를
+
+원격저장소 (갖고 와서 합치기)	git pull
+git pull (origin master)
+oring을 내 repository의 master 브랜치로 가지고 와서 덮어 씌울때(merge)
+동기화 시킬떄 사용하는 명령어
+덮어 씌우는것이지 내가 지금 사용중인 작업물은 사라진다
+
+원격저장소 (일단 갖고만 오기)	git fetch
+git fetch (origin master)
+동기화 시키지는 말고 그러니까 덮어 씌우지는 말고 (merge하지는 말고)
+origin을 내 repository의 master 브랜치로 일단 갖고와라
+
+원격저장소 (복사하기)		git clone
+git clone <url>
+<url>에 있는 원격 저장소 내용을 현재 디렉토리에 복사해오기
+origin 자동생성
+저장소를 복사해 온다.
+
+
+
+
+
